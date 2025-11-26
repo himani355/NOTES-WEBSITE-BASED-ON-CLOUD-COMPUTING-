@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notes Cloud</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    /* Input Box */
+    #noteInput {
+      width: 350px;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      background: #222;
+      color: white;
+      font-size: 16px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    /* Add Button */
+    button {
+      margin-left: 10px;
+      padding: 12px 20px;
+      font-size: 16px;
+      background: #ff5f9e;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      color: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff2d7a;
+      transform: scale(1.05);
+    }
+
+    /* Notes Box */
+    #notes {
+      margin-top: 30px;
+      width: 400px;
+    }
+
+    .note {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px;
+      margin: 12px 0;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
+      box-shadow: 0px 0px 10px #000;
+    }
+
+    .note:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .deleteBtn {
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #ff3d3d;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .deleteBtn:hover {
+      background: #ff1a1a;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>✨ Notes Cloud ✨</h2>
+
+  <div>
+    <input id="noteInput" placeholder="Write your note..." />
+    <button onclick="addNote()">Add</button>
+  </div>
+
+  <div id="notes"></div>
+
+  <script type="module" src="app.js"></script>
+
+</body>
+</html>
